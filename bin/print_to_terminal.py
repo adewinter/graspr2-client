@@ -21,7 +21,7 @@ def connect(serial_port_name):
 def read_serial_data_and_print():
 	while True:
 		line = serial_port.readline()
-		print(line.decode('utf-8'), end='')
+		print(line.decode('utf-8', errors='replace'), end='')
 
 
 def close_serial_port_connection():
